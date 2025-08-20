@@ -110,3 +110,56 @@ To run examples with parameters:
 ├── bake/             ← For advanced builds
 
 ✅ Done! NS-3 is now installed.
+
+
+
+
+## Installation of ns 3 in ubuntu 24.04
+
+https://releases.ubuntu.com/noble/
+
+https://www.nsnam.org/releases/ns-3-44/
+https://www.nsnam.com/2024/06/installation-of-ns3-in-ubuntu-ubuntu.html
+
+## Steps 
+
+$ sudo apt update && sudo apt upgrade -y
+
+$ sudo apt install g++ python3 cmake ninja-build git gir1.2-goocanvas-2.0 python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 tcpdump wireshark sqlite3 libsqlite3-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools openmpi-bin openmpi-common openmpi-doc libopenmpi-dev doxygen graphviz imagemagick python3-sphinx dia imagemagick texlive dvipng latexmk texlive-extra-utils texlive-latex-extra texlive-font-utils libeigen3-dev gsl-bin libgsl-dev libgslcblas0 libxml2 libxml2-dev libgtk-3-dev lxc-utils lxc-templates vtun uml-utilities ebtables bridge-utils libxml2 libxml2-dev libboost-all-dev ccache python3-full python3-pip
+
+$ wget https://www.nsnam.org/releases/ns-allinone-3.44.tar.bz2
+
+$ tar -xjf ns-allinone-3.44.tar.bz2
+
+$ cd ns-allinone-3.44
+
+$ ./build.py --enable-examples --enable-tests
+
+$ cd ns-3.44
+
+$ ./ns3 run first
+
+
+If successful, you’ll see output indicating a simple point-to-point network simulation, something like:
+
+At time 2s client sent 1024 bytes to 10.1.1.2 port 9
+
+https://blogger.googleusercontent.com/img/a/AVvXsEjH3ajT9LIzEPlTLJkxX674mIrnSe6-7Ztn9JVyikWMrZQuzAHsoJAxuXc7gsMN5kTV62zutr00JGCWJoEtuKQXtULf_wMf4R5us1B8pDCvpPVRiTSa4tTifEzZqWtU0FPW2psfAWw0082KIqQ0I-dAjbmxfHCRQTZCtacc9SsOXC4hg8o2fJtCPEkcrL8=w640-h360-rw
+
+ns3
+Network Simulator 3
+
+### (Optional) Configure Python Bindings
+
+If you plan to use Python for scripting NS-3 simulations, enable Python bindings during the build process. Install the Python development package if not already installed
+
+$ sudo apt install -y python3-dev python3-pip
+$ pip install pygccxml pygraphviz cppyy
+
+$ cd ns-allinone-3.44/ns-3.44/
+
+$ ./ns3 configure --enable-python-bindings
+$ ./ns3 build
+
+
+
