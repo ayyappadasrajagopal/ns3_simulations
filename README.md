@@ -191,4 +191,20 @@ sudo apt install idle3 -y
 ✅ Option 2: Use a Python virtual environment (best practice)
 
 Create a virtual environment in your home directory:
+python3 -m venv ~/pyenv
 
+Activate it:
+source ~/pyenv/bin/activate
+
+Now install your packages:
+pip install pygccxml pygraphviz cppyy
+
+When you’re done, deactivate with:
+deactivate
+
+# Install venv if not present (before creating the virtual environment)
+sudo apt install python3-venv -y
+
+if pygraohics error occurs Fix for pygraphviz build error
+Install Graphviz development libraries:
+sudo apt install graphviz graphviz-dev -y
