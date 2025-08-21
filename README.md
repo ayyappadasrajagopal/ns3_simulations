@@ -188,3 +188,7 @@ For Python 3 (recommended):
 sudo apt update
 sudo apt install idle3 -y
 
+✅ Option 2: Use a Python virtual environment (best practice)
+
+Create a virtual environment in your home directory:
+
