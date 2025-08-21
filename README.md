@@ -183,4 +183,8 @@ https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d
 sudo apt update
 sudo apt install code -y
 
+🔹 Install Python IDLE
+For Python 3 (recommended):
+sudo apt update
+sudo apt install idle3 -y
 
